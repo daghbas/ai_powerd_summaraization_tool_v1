@@ -1,0 +1,23 @@
+name: pdf_ocr_app
+description: A Flutter app to extract text from PDF documents using the DeepSeek‑OCR API.
+publish_to: 'none'
+
+# The version of the Dart SDK and Flutter to use.
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  file_picker: ^6.0.0
+  path_provider: ^2.0.15
+  pdfx: ^2.0.1
+  path: ^1.8.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
