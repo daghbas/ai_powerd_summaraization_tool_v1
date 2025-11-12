@@ -1,23 +1,49 @@
-name: pdf_ocr_app
-description: A Flutter app to extract text from PDF documents using the DeepSeek‑OCR API.
-publish_to: 'none'
+name: ai_powerd_summaraization_tool_v1
+description: A Flutter application for uploading PDF files, extracting their content via Gemini, and chatting about them.
+publish_to: 'none'  # This package is private and not intended for publishing on pub.dev
 
-# The version of the Dart SDK and Flutter to use.
 environment:
-  sdk: '>=3.1.0 <4.0.0'
+  sdk: "^3.6.1"
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.0
-  file_picker: ^6.0.0
-  path_provider: ^2.0.15
-  pdfx: ^2.0.1
-  path: ^1.8.2
+  cupertino_icons: ^1.0.8
+  # File management
+  file_picker: ^10.3.6
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  # HTTP requests for Gemini API
+  http: ^1.1.0
+  # State management
+  flutter_riverpod: ^3.0.3
+  # JSON encoding/decoding
+  json_annotation: ^4.8.1
+  # Database for local storage and search
+  sqflite: ^2.3.0
+  drift: ^2.18.0
+  sqlite3_flutter_libs: ^0.5.26
+  uuid: ^4.2.2
+  # Environment variables
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.13
+  drift_dev: ^2.18.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
+    - assets/
+    - assets/fonts/
+
+  fonts:
+    - family: IBMPlexSansArabic
+      fonts:
+        - asset: assets/fonts/IBMPlexSansArabic-Regular.ttf
+        - asset: assets/fonts/IBMPlexSansArabic-Bold.ttf
+          weight: 700
